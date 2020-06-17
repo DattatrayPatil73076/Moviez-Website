@@ -1,38 +1,69 @@
-.App {
+body {
+  background-color: rgba(0, 0, 0, 0.918);
+  color: whitesmoke;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 45%;
+    margin: 2.5%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  margin: 2.5%;
   text-align: center;
+  transition: 0.3s;
+  background-color: #49404085;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card:hover {
+  box-shadow: 0 15px 50px 0 rgb(68, 253, 114);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  padding: 2px 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.button {
+  background-color: #089afbef;
+  border: none;
   color: white;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  text-align: center;
+  font-size: 25px;
+  color: cyan;
 }
